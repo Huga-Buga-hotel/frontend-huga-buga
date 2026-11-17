@@ -1,0 +1,38 @@
+/* Card de caverna em grade */
+.cc { padding: 12px; display: flex; flex-direction: column; gap: 14px; position: relative; }
+.cc__media { position: relative; height: 230px; display: block; color: var(--carvao); }
+.cc__media:hover { text-decoration: none; }
+.cc__tag { position: absolute; top: 14px; left: 14px; }
+.cc__fav { position: absolute; top: 24px; right: 24px; }
+.cc__body { padding: 0 6px; display: flex; flex-direction: column; gap: 8px; }
+.cc__head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.cc__name { font: 900 28px/1 var(--f-titulo); color: var(--carvao); }
+.cc__name:hover { color: var(--link); text-decoration: none; }
+.cc__nota { font-weight: 700; font-size: 14px; white-space: nowrap; }
+.cc__foot { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; margin-top: 4px; gap: 10px; }
+@media (max-width: 767px) { .cc__media { height: 190px; } .cc__name { font-size: 24px; } }
+
+.cc-mini { flex: none; width: 220px; background: var(--papel); border: 2px solid var(--carvao); border-radius: var(--r-card-m1); padding: 8px; display: flex; flex-direction: column; gap: 6px; color: var(--carvao); scroll-snap-align: start; }
+.cc-mini:hover { text-decoration: none; border-color: var(--link); }
+
+/* Linha da lista */
+.cl { padding: 12px; display: grid; grid-template-columns: 280px 1fr 200px; gap: 22px; }
+.cl__media { position: relative; height: 190px; display: block; color: var(--carvao); }
+.cl__hot { position: absolute; top: 12px; left: 12px; }
+.cl__info { display: flex; flex-direction: column; gap: 10px; padding: 6px 0; min-width: 0; }
+.cl__name { font: 900 30px/1 var(--f-titulo); color: var(--carvao); }
+.cl__name:hover { color: var(--link); text-decoration: none; }
+.cl__desc { font-size: 14px; color: var(--texto-2); line-height: 1.5; }
+.cl__price { border-left: 1.5px dashed var(--linha); padding: 6px 0 6px 20px; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; gap: 4px; text-align: right; }
+.cl__m { display: none; }
+@media (max-width: 1100px) {
+  .cl { grid-template-columns: 220px 1fr 180px; gap: 16px; }
+}
+@media (max-width: 767px) {
+  .cl { grid-template-columns: 1fr; gap: 8px; padding: 8px; border-radius: var(--r-card-m); box-shadow: var(--sh-s); }
+  .cl__media { height: 130px; }
+  .cl__hot { top: 8px; left: 8px; font-size: 11px; padding: 4px 8px; border-radius: 8px 3px 7px 4px; }
+  .cl__hot .ms { display: none; }
+  .cl__info, .cl__price { display: none; }
+  .cl__m { display: flex; justify-content: space-between; align-items: flex-end; padding: 0 4px 4px; gap: 10px; }
+}

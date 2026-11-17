@@ -1,0 +1,41 @@
+{
+  "name": "frontend-huga-buga",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Site do Huga Buga Hotel (React + Vite + TypeScript)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@fontsource/figtree": "^5.3.0",
+    "@fontsource/londrina-solid": "^5.3.0",
+    "@fontsource/rubik-dirt": "^5.3.0",
+    "@tanstack/react-query": "^5.107.1",
+    "i18next": "^27.1.3",
+    "material-symbols": "^0.49.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-i18next": "^18.0.2",
+    "react-router-dom": "^7.18.5"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.12",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "jsdom": "^31.0.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}

@@ -1,0 +1,65 @@
+/* ---------- Tábua de busca (home) ---------- */
+.board {
+  position: relative; background: var(--papel); border: 2.5px solid var(--carvao); border-radius: var(--r-xl2); box-shadow: var(--sh-l);
+  padding: 14px 14px 14px 26px; display: grid; grid-template-columns: 1fr 1fr 1.3fr 1.1fr auto; align-items: center;
+}
+.board__col { display: flex; flex-direction: column; gap: 4px; padding: 0 18px; border-right: 1.5px dashed var(--linha); text-align: left; min-width: 0; cursor: pointer; }
+.board__col:first-child { padding-left: 0; }
+.board__col--last { border-right: 0; }
+.board__col:hover .board__val { color: var(--link); }
+.board__val { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; white-space: nowrap; overflow: hidden; }
+.board__val .ms { color: var(--fogo); font-size: 20px; }
+.board__select { appearance: none; border: 0; background: transparent; font-weight: 700; font-size: 16px; padding: 0 28px 0 0; cursor: pointer; color: var(--carvao); min-width: 0; }
+.board__select:focus { outline: none; }
+@media (max-width: 1100px) {
+  .board { grid-template-columns: 1fr 1fr 1.3fr auto; }
+  .board__col--last { display: none; }
+  .board__col:nth-child(3) { border-right: 0; }
+}
+
+.board-m { background: var(--papel); border: 2px solid var(--carvao); border-radius: var(--r-lg2); box-shadow: 5px 5px 0 var(--sombra-pedra); padding: 6px 14px 14px; flex-direction: column; }
+.board-m.only-mobile { display: none !important; }
+@media (max-width: 767px) { .board-m.only-mobile { display: flex !important; } }
+.board-m__row { display: flex; align-items: center; gap: 10px; padding: 10px 0; text-align: left; }
+.board-m__row + .board-m__row { border-top: 1.5px dashed var(--linha); margin-bottom: 4px; }
+.board-m__row > .ms { color: var(--fogo); }
+.board-m__row b { display: block; font-size: 15px; font-weight: 700; }
+
+/* ---------- Busca resumida (lista) ---------- */
+.board-s {
+  background: var(--papel); border: 2.5px solid var(--carvao); border-radius: var(--r-lg2); box-shadow: var(--sh-m);
+  padding: 10px 10px 10px 22px; display: flex; align-items: center; gap: 22px; font-weight: 700; font-size: 15px;
+}
+.board-s__item { display: flex; align-items: center; gap: 8px; white-space: nowrap; cursor: pointer; }
+.board-s__item:hover { color: var(--link); }
+.board-s__item .ms { color: var(--fogo); }
+.board-s__sep { width: 1.5px; height: 26px; background: var(--linha); flex: none; }
+.board-s__m { display: none; }
+@media (max-width: 900px) {
+  .board-s { display: none; }
+  .board-s__m { display: flex; align-items: center; gap: 10px; background: var(--papel); border: 2px solid var(--carvao); border-radius: var(--r-l1); padding: 10px 14px; text-align: left; width: 100%; }
+  .board-s__m > .ms:first-child { color: var(--fogo); font-size: 22px; }
+}
+
+/* ---------- Calendário ---------- */
+.cal { display: flex; flex-direction: column; gap: 12px; }
+.cal__nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.cal__nav button { width: 38px; height: 38px; border-radius: var(--r-m); border: 2px solid var(--carvao); display: inline-flex; align-items: center; justify-content: center; }
+.cal__nav button:disabled { border-style: dashed; border-color: var(--linha); color: var(--pedra-clara); cursor: default; }
+.cal__hint { font-size: 14px; font-weight: 700; color: var(--texto-2); text-align: center; }
+.cal__months { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+.cal__title { font: 900 20px/1 var(--f-titulo); text-transform: capitalize; margin-bottom: 8px; text-align: center; }
+.cal__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+.cal__w { text-align: center; font-size: 11px; font-weight: 800; color: var(--pedra); padding: 4px 0; text-transform: uppercase; }
+.cal__d { aspect-ratio: 1 / .92; border-radius: var(--r-s); display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; line-height: 1.1; border: 2px solid transparent; }
+.cal__d small { font-size: 9.5px; font-weight: 700; color: var(--texto-2); }
+.cal__d:hover:not(:disabled) { border-color: var(--carvao); }
+.cal__d:disabled { color: var(--linha); cursor: default; }
+.cal__d.is-full { text-decoration: line-through; color: var(--pedra-clara); }
+.cal__d.is-hol span { color: var(--ambar-escuro); }
+.cal__d.is-mid { background: var(--bege); border-radius: 3px; }
+.cal__d.is-edge { background: var(--carvao); color: var(--osso); }
+.cal__d.is-edge small, .cal__d.is-edge span { color: var(--osso); }
+
+.tribo-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 6px 0; border-bottom: 1.5px dashed var(--linha); }
+.tribo-idades { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }

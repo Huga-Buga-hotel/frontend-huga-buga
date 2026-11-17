@@ -1,0 +1,109 @@
+/* =========================================================================
+   Huga Buga · tokens do sistema de design (prancha 6 do Figma)
+   Terra, pedra e fogo. Nada é perfeitamente redondo.
+   ========================================================================= */
+:root {
+  /* Fogo (primária) */
+  --brasa-clara: #f7e3d3;
+  --tocha: #e0743c;
+  --fogo: #d4622a;
+  --fogo-hover: #bf5320;
+  --link: #b94f1d;
+  --link-hover: #8f3a12;
+  --brasa: #9c4318;
+  --fogo-sombra-clara: #f0c9ad;
+
+  /* Pedra e terra (neutros) */
+  --papel: #fbf8f3;
+  --areia: #f4efe7;
+  --couro: #ecdcc5;
+  --bege: #efe2cf;
+  --bege-escuro: #e2d0b6;
+  --linha: #cfc4b4;
+  --linha-clara: #e2d9cc;
+  --pedra: #8a7c6f;
+  --pedra-clara: #a89a8c;
+  --texto-2: #6e6257;
+  --texto-corpo: #5e5248;
+  --texto-forte: #4a3f36;
+  --carvao: #2a221c;
+  --carvao-hover: #3a3029;
+  --carvao-press: #1a1511;
+  --caverna: #221c17;
+  --caverna-linha: #4a3f35;
+  --osso: #f3ece2;
+  --osso-2: #c9b8a5;
+  --osso-3: #a89684;
+  --sombra-pedra: #d9cfc0;
+  --barro-claro: #cdb89a;
+  --terra: #6a4a2a;
+  --faixa: #c98a4b;
+  --faixa-escura: #7a4520;
+  --skeleton: #e6dccd;
+  --skeleton-2: #ebe3d6;
+
+  /* Semânticas */
+  --musgo-claro: #e3eed9;
+  --musgo: #4f7a3a;
+  --musgo-escuro: #3d6130;
+  --musgo-toast: #8fbf6a;
+  --ambar-claro: #fbefd2;
+  --ambar: #c98a12;
+  --ambar-icone: #a06d08;
+  --ambar-escuro: #8a5d06;
+  --ambar-toast: #e8b33a;
+  --ambar-campo: #fffaf0;
+  --barro-erro-claro: #f8e0db;
+  --barro-erro: #c23b2a;
+  --barro-erro-escuro: #a8301f;
+  --barro-erro-campo: #fdf3f1;
+  --barro-toast: #f07a64;
+  --rio-claro: #e2eaef;
+  --rio: #4d7188;
+  --rio-escuro: #3e6178;
+  --rio-toast: #8fb3cc;
+
+  /* Tipografia */
+  --f-logo: 'Rubik Dirt', cursive;
+  --f-titulo: 'Londrina Solid', 'Figtree', sans-serif;
+  --f-texto: 'Figtree', system-ui, sans-serif;
+  --f-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Raios "lascados" */
+  --r-tag: 9px 4px 8px 5px;
+  --r-s: 10px 4px 9px 5px;
+  --r-m: 12px 5px 11px 6px;
+  --r-m2: 12px 5px 11px 6px / 6px 11px 5px 12px;
+  --r-l: 14px 5px 12px 6px / 6px 12px 5px 14px;
+  --r-l1: 14px 5px 12px 6px;
+  --r-card-m: 16px 6px 14px 8px / 8px 14px 6px 16px;
+  --r-card-m1: 16px 6px 14px 8px;
+  --r-lg2: 18px 7px 16px 8px / 8px 16px 7px 18px;
+  --r-xl: 20px 8px 18px 10px / 10px 18px 8px 20px;
+  --r-xl2: 22px 8px 20px 10px / 10px 20px 8px 22px;
+  --r-tabua: 26px 10px 24px 12px / 12px 24px 10px 26px;
+  --r-voucher: 28px 10px 26px 12px / 12px 26px 10px 28px;
+  --r-check: 6px 3px 5px 3px;
+
+  /* Sombras de relevo (sem desfoque) */
+  --sh-s: 4px 4px 0 var(--sombra-pedra);
+  --sh-m: 6px 6px 0 var(--sombra-pedra);
+  --sh-l: 8px 8px 0 var(--sombra-pedra);
+  --sh-modal: 10px 10px 0 var(--carvao);
+  --sh-btn-fogo: 0 4px 0 var(--brasa);
+  --sh-btn-carvao: 0 4px 0 #000;
+
+  /* Layout */
+  --nav-h: 76px;
+  --nav-h-m: 58px;
+  --tabbar-h: 72px;
+  --page-max: 1280px;
+  --gutter: 48px;
+}
+
+@media (max-width: 1100px) {
+  :root { --gutter: 28px; }
+}
+@media (max-width: 767px) {
+  :root { --gutter: 16px; }
+}
